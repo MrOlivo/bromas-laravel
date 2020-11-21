@@ -22,8 +22,8 @@ class BromaCategoriaFactory extends Factory
     public function definition()
     {
         return [
-            'broma_id' => rand(1,10),
-            'categoria_id' => rand(1,4),
+            'broma_id' => rand(1,20),
+            'categoria_id' => rand(1,6),
         ];
     }
 }
