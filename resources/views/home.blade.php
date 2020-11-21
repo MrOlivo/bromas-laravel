@@ -13,8 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    {{ __('You are logged in!') }}
+                    <p>¡Usted está conectado!'</p>
                 </div>
             </div>
         </div>
