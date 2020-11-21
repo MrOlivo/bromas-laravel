@@ -12,10 +12,6 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
@@ -24,7 +20,7 @@
         <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Catálogo de bromas') }}
+                    {{ config('app.name') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -84,9 +80,21 @@
             </div>
         </nav>
 
+        <div class="jumbotron mb-0">
+            <div class="container">
+                <h3 class="font-weight-bold">Edwin Francisco Olivo Garcia</h3>
+                <h4>Universidad Autónoma de Nayarit</h4>
+                <p>Programación Distribuida del Lado del Servidor</p>
+                <a class="btn btn-lg btn-primary" href="{{ route('login') }}">{{ __('Login') }}</a>
+            </div>
+        </div>
+
         <main class="py-4">
             @yield('content')
         </main>
+        <footer class="footer mt-auto py-3 bg-dark">
+            <div class="container"><span class="text-light">Universidad Autónoma de Nayarit</span></div>
+        </footer>
     </div>
 </body>
 </html>
