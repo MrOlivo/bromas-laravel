@@ -3,7 +3,7 @@
 @section('content')
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-8">
+                <div class="col-sm-12 col-md-12">
                     <div class="card border-0">
                         @if (session('status'))
                         <div class="alert alert-success" role="alert">
@@ -12,7 +12,7 @@
                         @endif
                     </div>
                     @foreach ($bromas as $broma) 
-                        <div class="card my-4 border-0 shadow">
+                        <div class="card mb-4 border-0 shadow">
                             <div class="card-body">
                                 <h5 class="card-title">Broma</h5>
                                 <p class="card-text">
