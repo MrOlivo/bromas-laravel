@@ -80,15 +80,6 @@
             </div>
         </nav>
 
-        <div class="jumbotron mb-0">
-            <div class="container">
-                <h3 class="font-weight-bold">Edwin Francisco Olivo Garcia</h3>
-                <h4>Universidad Autónoma de Nayarit</h4>
-                <p>Programación Distribuida del Lado del Servidor</p>
-                <a class="btn btn-lg btn-primary" href="{{ route('login') }}">{{ __('Login') }}</a>
-            </div>
-        </div>
-
         <main class="py-4">
             @yield('content')
         </main>
