@@ -16,7 +16,7 @@ class CreateBromasTable extends Migration
         Schema::create('bromas', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('autor_id')->unsigned();
-            $table->string('broma');
+            $table->mediumText('broma');
             $table->timestamps();
             $table->foreign('autor_id')->references('id')->on('autors');
         });
