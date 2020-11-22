@@ -14,9 +14,11 @@ class CreateBromaCategoriasTable extends Migration
     public function up()
     {
         Schema::create('broma_categorias', function (Blueprint $table) {
-            $table->bigInteger('broma_id');
-            $table->bigInteger('categoria_id');
+            $table->bigInteger('broma_id')->unsigned();
+            $table->bigInteger('categoria_id')->unsigned();
             $table->timestamps();
+            $table->foreign('broma_id')->references('id')->on('bromas');
+            $table->foreign('categoria_id')->references('id')->on('categorias');
         });
     }
 
