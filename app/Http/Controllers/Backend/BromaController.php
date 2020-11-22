@@ -29,7 +29,15 @@ class BromaController extends Controller
      */
     public function create()
     {
-        return view('bromas.form');
+        $autores = Autor::get();
+        $categorias = Categoria::get();
+        $autores = Autor::get();
+
+        return view('bromas.form', [
+            'autores' => $autores,
+            'categorias' => $categorias,
+            'autores' => $autores
+        ]);
     }
 
     /**
@@ -40,7 +48,18 @@ class BromaController extends Controller
      */
     public function store(BromaRequest $request)
     {
-        Broma::create($request->all());
+        $broma = Broma::create([
+            'autor_id' => $request->autor_id,
+            'broma' => $request->broma,
+        ]);
+
+        foreach ($request->categorias as $categoria) {
+            BromaCategoria::create([
+                'broma_id' => $broma->id,
+                'categoria_id' => $categoria
+            ]);
+        }
+
         return back()->with('status', 'Creado con exito.');
     }
 
