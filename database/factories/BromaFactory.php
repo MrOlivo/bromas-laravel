@@ -24,7 +24,6 @@ class BromaFactory extends Factory
         return [
             'autor_id' => rand(1, 12),
             'broma' => $this->faker->sentence(15),
-            'fecha' => $this->faker->date(),
         ];
     }
 }

@@ -17,7 +17,6 @@ class CreateBromasTable extends Migration
             $table->id();
             $table->bigInteger('autor_id')->unsigned();
             $table->string('broma');
-            $table->date('fecha');
             $table->timestamps();
             $table->foreign('autor_id')->references('id')->on('autors');
         });
