@@ -21,7 +21,7 @@
                     @endif
                         <div class="form-group">
                             <label for="categoria">Escribe la categoría:</label>
-                            <input type="text" class="form-control" name="categoria" required id="categoria" value="{{ old('nombre', $categoria->categoria ?? '') }}">
+                            <input type="text" class="form-control" name="categoria" required id="categoria" value="{{ old('categoria', $categoria->categoria ?? '') }}">
                         </div>
                         <div class="form-group">
                             @csrf
