@@ -30,7 +30,9 @@
                                 @foreach ($autores as $autor)
                                 <option value="{{ old('id', $autor->id) }}" 
                                     @php
-                                        echo ($autor->id === $broma->autor_id ? ' selected ' : '');
+                                        if (isset($broma)) {
+                                            echo ($autor->id === $broma->autor_id ? ' selected ' : '');
+                                        }
                                     @endphp>
                                     {{ old('nombre', $autor->nombre) }}
                                 </option>
@@ -55,7 +57,7 @@
                         </div>
                         <div class="form-group">
                             @csrf
-                            @if (isset($autor))
+                            @if (isset($broma))
                                 @method('PUT')
                             @endif
                             <input type="submit" class="btn btn-primary" value="Enviar" name="Action">
