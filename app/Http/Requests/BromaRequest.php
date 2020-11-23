@@ -26,7 +26,8 @@ class BromaRequest extends FormRequest
         return [
             'broma' => ['required'],
             'fecha' => ['date'],
-            'categorias' => 'required'
+            'categorias' => ['required'],
+            'Autor' => ['required', 'not_in:0']
         ];
     }
 }
