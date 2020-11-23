@@ -29,6 +29,6 @@ class DatabaseSeeder extends Seeder
         Autor::factory(12)->create();
         Broma::factory(20)->create();
         Categoria::factory(6)->create();
-        BromaCategoria::factory(25)->create();
+        BromaCategoria::factory(20)->create();
     }
 }
