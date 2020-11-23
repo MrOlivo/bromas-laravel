@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Broma extends Model
 {
     use HasFactory;
+    public $timestamps = FALSE;
     
     protected $fillable = [
         'id',
