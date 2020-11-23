@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Autor;
 use App\Models\Broma;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -22,7 +23,7 @@ class BromaFactory extends Factory
     public function definition()
     {
         return [
-            'autor_id' => rand(1, 12),
+            'autor_id' => rand(1, Autor::all()->count('*')),
             'broma' => $this->faker->sentence(15),
         ];
     }

@@ -2,7 +2,9 @@
 
 namespace Database\Factories;
 
+use App\Models\Broma;
 use App\Models\BromaCategoria;
+use App\Models\Categoria;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class BromaCategoriaFactory extends Factory
@@ -22,8 +24,8 @@ class BromaCategoriaFactory extends Factory
     public function definition()
     {
         return [
-            'broma_id' => rand(1,20),
-            'categoria_id' => rand(1,6),
+            'broma_id' => rand(1, Broma::all()->count('*')),
+            'categoria_id' => rand(1, Categoria::all()->count('*')),
         ];
     }
 }
