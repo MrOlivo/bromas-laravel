@@ -13,6 +13,14 @@
                             {{ session('status') }}
                         </div>
                     @endif
+
+                    @if($errors->any())
+                        <div class="alert alert-danger">
+                            @foreach($errors->all() as $error)
+                            -{{ $error }} <br>
+                            @endforeach
+                        </div>
+                    @endif
                     
                     @if (isset($categoria))
                         <form action="{{ route('categorias.update', $categoria) }}" method="post">

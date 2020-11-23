@@ -13,6 +13,14 @@
                             {{ session('status') }}
                         </div>
                     @endif
+
+                    @if($errors->any())
+                        <div class="alert alert-danger">
+                            @foreach($errors->all() as $error)
+                            -{{ $error }} <br>
+                            @endforeach
+                        </div>
+                    @endif
                     
                     @if (isset($autor))
                         <form action="{{ route('autores.update', $autor) }}" method="post">

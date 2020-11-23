@@ -13,6 +13,14 @@
                             {{ session('status') }}
                         </div>
                     @endif
+
+                    @if($errors->any())
+                        <div class="alert alert-danger">
+                            @foreach($errors->all() as $error)
+                            -{{ $error }} <br>
+                            @endforeach
+                        </div>
+                    @endif
                     
                     @if (isset($broma))
                         <form action="{{ route('bromas.update', $broma) }}" method="post">
@@ -25,8 +33,8 @@
                         </div>
                         <div class="form-group">
                             <label for="autor_id">Autor</label>
-                            <select name="autor_id" id="autor_id">
-                                <option>Seleccione uno...</option>
+                            <select name="Autor" id="autor_id">
+                                <option value="">Seleccione uno...</option>
                                 @foreach ($autores as $autor)
                                 <option value="{{ old('id', $autor->id) }}" 
                                     @php
