@@ -80,7 +80,7 @@
             </div>
         </nav>
 
-        <main>
+        <main class="py-4">
             @yield('content')
         </main>
         <footer class="footer mt-auto py-3 bg-dark">
