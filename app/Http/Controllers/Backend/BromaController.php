@@ -49,7 +49,7 @@ class BromaController extends Controller
     public function store(BromaRequest $request)
     {
         $broma = Broma::create([
-            'autor_id' => $request->autor_id,
+            'autor_id' => $request->Autor,
             'broma' => $request->broma,
         ]);
 
@@ -111,7 +111,7 @@ class BromaController extends Controller
         }
 
         $broma->update([
-            'autor_id' => $request->autor_id,
+            'autor_id' => $request->Autor,
             'broma' => $request->broma,
         ]);
         return back()->with('status', 'Actualizado con exito.');
