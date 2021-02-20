@@ -101,7 +101,7 @@ class BromaController extends Controller
      */
     public function update(BromaRequest $request, Broma $broma)
     {
-        BromaCategoria::where('broma_id', '=', $broma->id)->delete();
+        BromaCategoria::where('broma_id', $broma->id)->delete();
 
         foreach ($request->categorias as $categoria) {
             BromaCategoria::create([
