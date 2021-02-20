@@ -24,10 +24,10 @@ class BromaRequest extends FormRequest
     public function rules()
     {
         return [
-            'broma' => ['required'],
-            'fecha' => ['date'],
-            'categorias' => ['required'],
-            'Autor' => ['required', 'not_in:0']
+            'broma' => 'required',
+            'fecha' => 'date',
+            'categorias' => 'required',
+            'Autor' => 'required|not_in:0'
         ];
     }
 }
