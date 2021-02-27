@@ -29,7 +29,7 @@
                     @endif
                         <div class="form-group">
                             <label for="nombre">Escribe tu nombre:</label>
-                            <input type="text" class="form-control" name="nombre" required id="nombre" value="{{ old('nombre', $autor->nombre ?? '') }}">
+                            <input type="text" class="form-control" name="nombre" minlength="1" required id="nombre" value="{{ old('nombre', $autor->nombre ?? '') }}">
                         </div>
                         <div class="form-group">
                             <label for="email">Escribe tu email:</label>
