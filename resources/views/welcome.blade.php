@@ -16,14 +16,7 @@
         <div class="">
             <div class="d-flex flex-row flex-wrap justify-content-center">
                 @foreach ($bromas as $broma) 
-                    <div class="card shadow m-2" style="max-width: 300px">
-                        <div class="card-body">
-                            <h5 class="card-title">Broma</h5>
-                            <p class="card-text">
-                                {{ $broma->broma }}
-                            </p>
-                        </div>
-                    </div>
+                    <x-broma-card :broma="$broma" />
                 @endforeach
             </div>
         </div>
