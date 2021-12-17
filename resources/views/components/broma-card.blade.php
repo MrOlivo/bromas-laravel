@@ -1,17 +1,17 @@
-<div>
-    <div class="card shadow m-2" style="max-width: 300px">
+<div class="col">
+    <div class="card shadow-sm h-100">
         <div class="card-body">
-            <h5 class="card-title">Broma</h5>
-            <p class="card-text">
-                {{ $broma->broma }}
-            </p>
-        </div>
-        <div class="card-footer pt-2 bg-secondary">
-            @forelse ($broma->categorias as $elemento)
-                <div class="text-white">{{ $elemento->categoria }}</div>
-            @empty
-                <div class="text-white">Sin categoría</div>
-            @endforelse
+            <p class="card-text">{{ $broma->broma }}</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    @forelse ($broma->categorias as $elemento)
+                    <button type="button" class="btn btn-sm btn-outline-secondary">{{ $elemento->categoria }}</button>
+                    @empty
+                    <div>No category</div>
+                    @endforelse
+                </div>
+                <small class="text-muted">{{ $broma->fecha }}</small>
+            </div>
         </div>
     </div>
 </div>

@@ -1,27 +1,28 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="jumbotron mb-6">
-        <div class="container">
-            <h3 class="font-weight-bold">Edwin Francisco Olivo Garcia</h3>
-            <h4>Universidad Autónoma de Nayarit</h4>
-            <p>Programación Distribuida del Lado del Servidor</p>
-            <a class="btn btn-lg btn-primary" href="{{ route('login') }}">{{ __('Login') }}</a>
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">{{ config('app.name') }}</h1>
+            <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+            <p>
+                <a href="{{ route('login') }}" class="btn btn-primary text-white my-2">{{ __('Login') }}</a>
+                <a href="{{ route('register') }}" class="btn btn-secondary my-2">{{ __('Register') }}</a>
+            </p>
         </div>
     </div>
-    <div class="container">
-        <div class="mb-4 d-flex justify-content-center">
-            {{ $bromas->links() }}
-        </div>
-        <div class="">
-            <div class="d-flex flex-row flex-wrap justify-content-center">
-                @foreach ($bromas as $broma) 
-                    <x-broma-card :broma="$broma" />
-                @endforeach
-            </div>
-        </div>
-        <div class="my-4 d-flex justify-content-center">
-            {{ $bromas->links() }}
+</section>
+<div class="container">
+    <div class="">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            @foreach ($bromas as $broma)
+            <x-broma-card :broma="$broma" />
+            @endforeach
         </div>
     </div>
+    <div class="my-4 d-flex justify-content-center">
+        {{ $bromas->links() }}
+    </div>
+</div>
 @endsection
