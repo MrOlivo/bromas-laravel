@@ -6,10 +6,12 @@
         <div class="col-lg-6 col-md-8 mx-auto">
             <h1 class="fw-light">{{ config('app.name') }}</h1>
             <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+            @guest
             <p>
                 <a href="{{ route('login') }}" class="btn btn-primary text-white my-2">{{ __('Login') }}</a>
                 <a href="{{ route('register') }}" class="btn btn-secondary my-2">{{ __('Register') }}</a>
             </p>
+            @endguest
         </div>
     </div>
 </section>
