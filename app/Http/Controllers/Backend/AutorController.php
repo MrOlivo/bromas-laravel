@@ -15,7 +15,7 @@ class AutorController extends Controller
      */
     public function index()
     {
-        $autores = Autor::get();
+        $autores = Autor::simplePaginate(15);
         return view('autores.index', compact('autores'));
     }
 

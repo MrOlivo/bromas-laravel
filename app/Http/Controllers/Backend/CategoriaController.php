@@ -15,7 +15,7 @@ class CategoriaController extends Controller
      */
     public function index()
     {
-        $categorias = Categoria::get();
+        $categorias = Categoria::simplePaginate(15);
         return view('categorias.index', compact('categorias'));
     }
 
@@ -38,7 +38,7 @@ class CategoriaController extends Controller
     public function store(CategoriaRequest $request)
     {
         Categoria::create($request->all());
-        return back()->with('status', 'Creado con exito.'); 
+        return back()->with('status', 'Creado con exito.');
     }
 
     /**
@@ -62,7 +62,7 @@ class CategoriaController extends Controller
     public function update(CategoriaRequest $request, Categoria $categoria)
     {
         $categoria->update($request->all());
-        return back()->with('status', 'Actualizado con exito.'); 
+        return back()->with('status', 'Actualizado con exito.');
     }
 
     /**

@@ -18,7 +18,7 @@ class BromaController extends Controller
      */
     public function index()
     {
-        $bromas = Broma::get();
+        $bromas = Broma::simplePaginate(15);
         return view('bromas.index', compact('bromas'));
     }
 

@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="shadow-sm p-4">
+<div class="container py-4">
+    <div class="shadow-sm p-4 bg-white">
         <div class="fs-2 d-flex justify-content-between">
-            {{ __('Dashboard') }}
+            {{ __('Authors') }} {{ __('Dashboard') }}
             <a href="{{ route('autores.create') }}" class="btn btn-primary text-white">Crear</a>
         </div>
 
