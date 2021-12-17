@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="m-4">
-        <div class="card">
+        <div class="card max-400 mx-auto">
             <div class="card-header">{{ __('Register') }}</div>
 
             <div class="card-body">
