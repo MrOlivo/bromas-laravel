@@ -9,7 +9,7 @@ overrides:
 
 devDependencies:
   axios:
-    specifier: ^1.6.8
+    specifier: '>=1.6.0'
     version: 1.6.8
   bootstrap:
     specifier: ^5.3.3
