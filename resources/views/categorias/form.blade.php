@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container py-4">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -27,11 +27,11 @@
                     @else
                         <form action="{{ route('categorias.store') }}" method="post">
                     @endif
-                        <div class="form-group">
+                        <div class="form-group pt-4">
                             <label for="categoria">Escribe la categoría:</label>
                             <input type="text" class="form-control" name="categoria" required id="categoria" value="{{ old('categoria', $categoria->categoria ?? '') }}">
                         </div>
-                        <div class="form-group">
+                        <div class="form-group pt-4">
                             @csrf
                             @if (isset($categoria))
                                 @method('PUT')

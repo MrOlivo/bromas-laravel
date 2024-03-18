@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container py-4">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -31,7 +31,7 @@
                             <label for="broma">Escribe tu broma</label>
                             <textarea name="broma" class="form-control" id="broma" cols="40" rows="3">{{ old('broma', $broma->broma ?? '') }}</textarea>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group pt-4">
                             <label for="autor_id">Autor</label>
                             <select name="Autor" id="autor_id">
                                 <option value="">Seleccione uno...</option>
@@ -47,7 +47,7 @@
                                 @endforeach
                             </select>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group pt-4">
                             <fieldset>
                                 <legend>Categorías</legend>
                                 @foreach ($categorias as $categoria)
@@ -63,7 +63,7 @@
                                 @endforeach
                             </fieldset>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group pt-4">
                             @csrf
                             @if (isset($broma))
                                 @method('PUT')
