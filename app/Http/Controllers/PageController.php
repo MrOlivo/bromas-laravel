@@ -9,7 +9,7 @@ class PageController extends Controller
 {
     public function bromas()
     {
-        $bromas = Broma::with('user')->simplePaginate();
+        $bromas = Broma::with('user')->paginate(6);
         return view('welcome', compact('bromas'));
     }
 }
