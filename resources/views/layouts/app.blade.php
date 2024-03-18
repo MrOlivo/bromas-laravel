@@ -10,7 +10,7 @@
     <title>{{ config('app.name', 'Catálogo de bromas') }}</title>
 
     <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body class="d-flex flex-column h-100">
     <div id="app">
